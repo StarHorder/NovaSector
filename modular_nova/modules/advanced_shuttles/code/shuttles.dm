@@ -148,6 +148,13 @@
 	port_id = "whiteship"
 	suffix = "ouroboros"
 
+/datum/map_template/shuttle/emergency/Flumf
+	name = "SFS Explorer"
+	description = "Previously an exploratory vessel, retrofitted for evacuation duties."
+	prefix = "_maps/shuttle/nova/"
+	suffix = "explorer"
+
+
 /datum/map_template/shuttle/arrivals_nova
 	name = "NTV Relay (Arrivals)"
 	prefix = "_maps/shuttles/nova/"
