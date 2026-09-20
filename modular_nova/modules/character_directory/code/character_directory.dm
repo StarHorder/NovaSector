@@ -32,7 +32,21 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	savefile_identifier = PREFERENCE_CHARACTER
 
 /datum/preference/choiced/attraction/init_possible_values()
-	return list("Gay", "Lesbian", "Straight", "Skolio", "Bi", "Pan", "Poly", "Omni", "Ace", "Aro", "Aro/Ace", "Unset", "Check OOC")
+	return list(
+		"Unset",
+		"Check OOC",
+		"Straight",
+		"Lesbian",
+		"Gay",
+		"Bisexual",
+		"Pansexual",
+		"Polysexual",
+		"Asexual",
+		"Aromantic",
+		"Aro/Ace",
+		"Skoliosexual",
+		"Omnisexual",
+	)
 
 /datum/preference/choiced/attraction/create_default_value()
 	return "Unset"
@@ -46,7 +60,24 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	savefile_identifier = PREFERENCE_CHARACTER
 
 /datum/preference/choiced/display_gender/init_possible_values()
-	return list("Male", "Female", "Null", "Plural", "Nonbinary", "Omni", "Trans", "Andro", "Gyno", "Fluid", "Unset", "Check OOC")
+	return list(
+		"Unset",
+		"Check OOC",
+		"Male",
+		"Male - Femme",
+		"Male - Butch",
+		"Female",
+		"Female - Femme",
+		"Female - Butch",
+		"Nonbinary",
+		"Genderfluid",
+		"Trans",
+		"Andromorph",
+		"Gynomorph",
+		"Agender",
+		"Plural",
+		"Omnigender",
+	)
 
 /datum/preference/choiced/display_gender/create_default_value()
 	return "Unset"
@@ -59,11 +90,8 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	COOLDOWN_DECLARE(char_directory_cooldown)
 
 /// Opens character directory UI for a specific user
-/client/verb/show_character_directory(specific_ad as text|null)
-	set name = "Character Directory"
-	set category = "OOC"
-	set desc = "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more."
-
+GAME_VERB_DESC(/client, show_character_directory, "Character Directory", "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more.", "OOC")
+	var/specific_ad = structured_args["specific_ad"]
 	if(is_character_directory_on_cooldown())
 		return
 

@@ -14,7 +14,7 @@
 
 SUBSYSTEM_DEF(automapper)
 	name = "Automapper"
-	flags = SS_NO_FIRE
+	ss_flags = SS_NO_FIRE
 
 	/// The path to our TOML file
 	var/config_file = "_maps/nova/automapper/automapper_config.toml"
@@ -22,6 +22,9 @@ SUBSYSTEM_DEF(automapper)
 	var/loaded_config
 	/// Our preloaded map templates
 	var/list/preloaded_map_templates = list()
+	/// Every turf our preloaded templates have laid claim to, kept for the whole round.
+	/// Anything that loads maps after LoadGroup() has run (modular map modules, for example) must not write over these.
+	var/list/reserved_turfs = list()
 
 /datum/controller/subsystem/automapper/Initialize()
 	loaded_config = rustg_read_toml_file(config_file)
@@ -161,4 +164,5 @@ SUBSYSTEM_DEF(automapper)
 				continue
 
 			blacklisted_turfs[blacklisted_turf] = TRUE
+			reserved_turfs[blacklisted_turf] = TRUE
 	return blacklisted_turfs

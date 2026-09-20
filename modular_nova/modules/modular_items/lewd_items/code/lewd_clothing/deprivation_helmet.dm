@@ -58,10 +58,13 @@
 	desc = "Makes it impossible to see anything."
 
 /datum/action/item_action/toggle_vision/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
 	var/obj/item/clothing/head/deprivation_helmet/deprivation_helmet = target
-	var/mob/living/carbon/affected_carbon = usr
+	var/mob/living/carbon/human/affected_human = usr
 	if(istype(deprivation_helmet))
-		if(deprivation_helmet == affected_carbon.head)
+		if(deprivation_helmet == affected_human.head)
 			to_chat(usr, span_notice("You can't reach the deprivation helmet switch!"))
 		else
 			deprivation_helmet.SwitchHelmet("vision")
@@ -72,10 +75,13 @@
 	desc = "Makes it impossible to hear anything."
 
 /datum/action/item_action/toggle_hearing/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
 	var/obj/item/clothing/head/deprivation_helmet/deprivation_helmet = target
-	var/mob/living/carbon/affected_carbon = usr
+	var/mob/living/carbon/human/affected_human = usr
 	if(istype(deprivation_helmet))
-		if(deprivation_helmet == affected_carbon.head)
+		if(deprivation_helmet == affected_human.head)
 			to_chat(usr, span_notice("You can't reach the deprivation helmet switch!"))
 		else
 			deprivation_helmet.SwitchHelmet("hearing")
@@ -86,10 +92,13 @@
 	desc = "Makes it impossible to say anything."
 
 /datum/action/item_action/toggle_speech/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
 	var/obj/item/clothing/head/deprivation_helmet/deprivation_helmet = target
-	var/mob/living/carbon/affected_carbon = usr
+	var/mob/living/carbon/human/affected_human = usr
 	if(istype(deprivation_helmet))
-		if(deprivation_helmet == affected_carbon.head)
+		if(deprivation_helmet == affected_human.head)
 			to_chat(usr, span_notice("You can't reach the deprivation helmet switch!"))
 		else
 			deprivation_helmet.SwitchHelmet("speech")

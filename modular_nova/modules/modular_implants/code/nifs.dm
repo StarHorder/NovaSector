@@ -200,6 +200,9 @@
 	if(blood_drain && !blood_check()) //Disables blood draining if the mob fails the blood check
 		toggle_blood_drain(TRUE)
 
+	if(nutrition_drain)
+		linked_mob.adjust_nutrition(-nutrition_drain_rate)
+
 	if(blood_drain)
 		linked_mob.adjust_blood_volume(-blood_drain_rate)
 
@@ -232,15 +235,11 @@
 	if(!bypass && !nutrition_check())
 		return FALSE
 
-	var/hunger_modifier = linked_mob.physiology.hunger_mod
-
 	if(nutrition_drain)
-		hunger_modifier = nutrition_drain_rate
 		power_usage += (nutrition_drain_rate * nutrition_conversion_rate)
 		nutrition_drain = FALSE
 		return TRUE
 
-	hunger_modifier *= nutrition_drain_rate
 	power_usage -= (nutrition_drain_rate * nutrition_conversion_rate)
 	nutrition_drain = TRUE
 	return TRUE
@@ -258,7 +257,7 @@
 ///Toggles Blood Drain. Bypasss -  Ignores the need to perform the blood_check proc.
 /obj/item/organ/cyberimp/brain/nif/proc/toggle_blood_drain(bypass = FALSE)
 	if(!bypass && !blood_check())
-		return
+		return FALSE
 
 	blood_drain = !blood_drain
 
@@ -266,10 +265,11 @@
 		power_usage += (blood_drain_rate * blood_conversion_rate)
 
 		balloon_alert(linked_mob, "blood draining disabled")
-		return
+		return TRUE
 
 	power_usage -= (blood_drain_rate * blood_conversion_rate)
 	balloon_alert(linked_mob, "blood draining enabled")
+	return TRUE
 
 ///Checks if the NIF is able to draw blood as a power source?
 /obj/item/organ/cyberimp/brain/nif/proc/blood_check()
@@ -383,7 +383,7 @@
 		linked_mob.playsound_local(linked_mob, bad_sound, 60, FALSE)
 		return
 
-	to_chat(linked_mob, span_cyan("[nif_icon] <b>NIF Message</b>: [message_to_send]"))
+	to_chat(linked_mob, span_cyan_nova("[nif_icon] <b>NIF Message</b>: [message_to_send]"))
 	linked_mob.playsound_local(linked_mob, good_sound, 60, FALSE)
 
 

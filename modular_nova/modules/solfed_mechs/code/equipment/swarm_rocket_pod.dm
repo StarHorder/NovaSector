@@ -90,6 +90,9 @@
 	button_icon_state = "mech_ivanov"
 
 /datum/action/vehicle/sealed/mecha/swarm_rocket_pod/Trigger(mob/clicker, trigger_flags)
+	. = ..()
+	if(!.)
+		return
 	var/obj/item/mecha_parts/mecha_equipment/swarm_rocket_pod/pod = locate(/obj/item/mecha_parts/mecha_equipment/swarm_rocket_pod) in chassis.equip_by_category[MECHA_UTILITY]
 	if (pod.trigger_swarm_rocket(clicker))
 		button_icon_state = "mech_ivanov_cooldown"
@@ -238,4 +241,4 @@
 	tracker.target = target
 
 	var/drop_delay = 2 SECONDS
-	addtimer(CALLBACK(tracker, /obj/effect/swarm_rocket_tracker/proc/step_or_drop), drop_delay, TIMER_STOPPABLE | TIMER_DELETE_ME)
+	addtimer(CALLBACK(tracker, TYPE_PROC_REF(/obj/effect/swarm_rocket_tracker, step_or_drop)), drop_delay, TIMER_STOPPABLE | TIMER_DELETE_ME)

@@ -46,7 +46,11 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 			misc_list[++misc_list.len] = list(
 				"name" = name,
 				"rank" = rank,
+				// NOVA EDIT CHANGE BEGIN
+				// ORIGINAL: "trim" = job?.tgui_icon,
 				"trim" = trim,
+				"icon" = job?.tgui_icon,
+				// NOVA EDIT CHANGE END
 				)
 			continue
 		for(var/department_type in job.departments_list)
@@ -60,7 +64,11 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 			var/list/entry = list(
 				"name" = name,
 				"rank" = rank,
+				// NOVA EDIT CHANGE BEGIN
+				// ORIGINAL: "trim" = job.tgui_icon,
 				"trim" = trim,
+				"icon" = job.tgui_icon,
+				// NOVA EDIT CHANGE END
 				)
 			var/list/department_list = manifest_out[department.department_name]
 			if(istype(job, department.department_head))
@@ -112,7 +120,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 	if(!(person.mind?.assigned_role.job_flags & JOB_CREW_MANIFEST))
 		return
 	// NOVA EDIT ADDITION START - Visitor ID -> no manifest
-	if(person.has_quirk(/datum/quirk/visitor) || ("Visitor ID" in person_client?.prefs.all_quirks))
+	if((person.has_quirk(/datum/quirk/visitor) || ("Visitor ID" in person_client?.prefs.all_quirks)) && is_assistant_job(person.mind?.assigned_role))
 		return inject_guest(person, person_client)
 	// NOVA EDIT ADDITION END
 
@@ -141,7 +149,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 		character_appearance = character_appearance,
 		dna_string = record_dna.unique_enzymes,
 		fingerprint = md5(record_dna.unique_identity),
-		gender = person_gender,
+		gender = person.gender,
 		initial_rank = assignment,
 		name = person.real_name,
 		rank = chosen_assignment, // NOVA EDIT - Alt job titles - ORIGINAL: rank = assignment,
@@ -239,7 +247,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 			if(open_slots < 1)
 				continue
 			open += open_slots
-		positions[department.department_name] = list("exceptions" = exceptions, "open" = open)
+		positions[department.department_name] = list("exceptions" = exceptions, "open" = open, "color" = department.ui_color)
 
 	return list(
 		"manifest" = get_manifest(),

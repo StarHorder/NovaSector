@@ -91,7 +91,7 @@
 	desc = "A dated attempt at upsizing a revolver to a 'servicable' caliber for frontier and/or otherwise distant planets. \
 	Evidently, the conclusion of those efforts was a four-shell cylinder made for twelve gauge shells."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/rev12ga
-	recoil = SAWN_OFF_RECOIL
+	recoil = 1
 	weapon_weight = WEAPON_MEDIUM
 	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/guns_32.dmi'
 	icon_state = "bobr"
@@ -123,7 +123,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/zashch
 	name = "\improper 'Zashch' Heavy Pistol"
-	desc = "A hulking, self-loading 10mm handgun, designated 'Zashchitnik'. Feeds from large 18 round box magazines."
+	desc = "A hulking, self-loading 10mm handgun, designated 'Zashchitnik'. Feeds from large 20 round box magazines."
 	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/szot_dynamica/guns_32.dmi'
 	icon_state = "zashch"
 	lefthand_file = 'modular_nova/modules/modular_weapons/icons/mob/company_and_or_faction_based/szot_dynamica/guns_lefthand.dmi'

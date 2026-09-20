@@ -295,9 +295,8 @@ GLOBAL_LIST_INIT(all_loadout_categories, init_loadout_categories())
 			if(istype(equipped_item, /obj/item/clothing/accessory))
 				// Snowflake handing for accessories, because we need to update the thing it's attached to instead
 				if(isclothing(equipped_item.loc))
-					var/obj/item/clothing/under/attached_to = equipped_item.loc
-					attached_to.update_accessory_overlay()
-					update_flag |= (ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING)
+					var/obj/item/clothing/attached_to = equipped_item.loc
+					update_flag |= attached_to.slot_flags
 			else
 				update_flag |= equipped_item.slot_flags
 			break
@@ -369,7 +368,7 @@ GLOBAL_LIST_INIT(all_loadout_categories, init_loadout_categories())
 		displayed_text[FA_ICON_SPAGHETTI_MONSTER_FLYING] = "Species Whitelist: [capitalize(jointext(species_whitelist, ", "))]"
 	if(species_blacklist)
 		displayed_text[FA_ICON_SHRIMP] = "Species Blacklist: [capitalize(jointext(species_blacklist, ", "))]"
-	if(nova_stars_only)
+	if(GLOB.nova_star_restrictions && nova_stars_only)
 		displayed_text[FA_ICON_HOURGLASS_HALF] = "Nova Star-Only"
 	if(donator_only || ckeywhitelist)
 		displayed_text[FA_ICON_COINS] = "Donator-Only"
