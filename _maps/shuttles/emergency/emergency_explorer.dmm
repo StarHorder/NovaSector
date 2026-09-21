@@ -821,8 +821,7 @@
 "TO" = (
 /obj/machinery/door/airlock/corporate,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	id_tag = "SHUTTLECONF";
-	no_damage_feedback = "How the fuck did you hit this?"
+	id_tag = "SHUTTLECONF"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command,
 /obj/effect/mapping_helpers/airlock/access/any/cent_com,
@@ -968,13 +967,13 @@ rS
 rS
 Xt
 rS
-Xt
-rS
-rS
-rS
-rS
-rS
 no
+rS
+rS
+rS
+rS
+rS
+Xt
 rS
 Xt
 rS

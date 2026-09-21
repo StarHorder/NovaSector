@@ -56194,11 +56194,8 @@
 	dir = 4;
 	height = 32;
 	width = 27;
-	dheight = 10;
-	dwidth = 1;
-	shuttle_id = "emergency_explorer";
-	pixel_x = -1;
-	json_key = emergency
+	shuttle_id = "emergency_home";
+	dwidth = 1
 	},
 /turf/open/floor/iron/dark/smooth_large/airless,
 /area/station/commons/orbital_dock)
@@ -180088,13 +180085,13 @@ jYy
 qby
 qby
 qby
-jYy
-qby
-jYy
-jYy
-jYy
-qby
 uhJ
+qby
+jYy
+jYy
+jYy
+qby
+jYy
 qby
 jYy
 qby
