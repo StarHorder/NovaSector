@@ -1639,6 +1639,13 @@
 "aDR" = (
 /turf/closed/wall,
 /area/station/service/lawoffice)
+"aDW" = (
+/obj/effect/turf_decal/arrows/white{
+	dir = 4
+	},
+/obj/machinery/camera/autoname/directional/north,
+/turf/open/floor/iron/small,
+/area/station/hallway/primary/central)
 "aEg" = (
 /obj/machinery/light/small/dim/directional/north,
 /turf/open/floor/plating,
@@ -5807,7 +5814,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/mob_buckler,
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/supermatter/room/upper)
 "ciF" = (
@@ -11155,6 +11161,7 @@
 /area/station/ai/satellite/exterior)
 "efE" = (
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "efK" = (
@@ -25667,6 +25674,7 @@
 /area/station/cargo/storage)
 "jhS" = (
 /obj/structure/table/glass,
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "jia" = (
@@ -35018,7 +35026,9 @@
 /mob/living/basic/pet/dog/dobermann{
 	gender = "female"
 	},
-/obj/effect/mapping_helpers/mob_buckler,
+/obj/structure/chair{
+	dir = 4
+	},
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/supermatter/room/upper)
 "mEe" = (
@@ -41567,6 +41577,7 @@
 /obj/machinery/button/elevator/directional/north{
 	id = "ArrivalsELEVATOR"
 	},
+/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "oWV" = (
@@ -56195,7 +56206,8 @@
 	height = 32;
 	width = 27;
 	shuttle_id = "emergency_home";
-	dwidth = 1
+	dwidth = 1;
+	name = "Flumfstation Emergency Evacuation Shuttle Dock"
 	},
 /turf/open/floor/iron/dark/smooth_large/airless,
 /area/station/commons/orbital_dock)
@@ -62816,6 +62828,12 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"wzV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/directional/south,
+/obj/machinery/camera/autoname/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "wzY" = (
 /obj/structure/grille/broken,
 /obj/structure/lattice,
@@ -64698,6 +64716,11 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/iron/smooth_large,
 /area/station/tcommsat/server)
+"xjC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/camera/autoname/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "xjE" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/ce)
@@ -65065,7 +65088,7 @@
 /obj/effect/landmark/navigate_destination,
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/open/floor/engine/hull/reinforced/air,
 /area/station/command/vault)
 "xpp" = (
 /obj/effect/decal/cleanable/dirt{
@@ -66569,6 +66592,13 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /turf/open/floor/iron,
 /area/station/science/ordnance)
+"xRP" = (
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/camera/autoname/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/primary/aft)
 "xRV" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -97299,7 +97329,7 @@ gxI
 gxI
 pxe
 loB
-dQb
+aDW
 uMJ
 uMJ
 sES
@@ -99619,7 +99649,7 @@ loB
 mBK
 oHV
 xrj
-mBK
+xRP
 jHG
 sCl
 qnq
@@ -101165,7 +101195,7 @@ bFm
 yfs
 ooP
 rOA
-nRG
+xjC
 vyN
 vyN
 vyN
@@ -104506,7 +104536,7 @@ vGS
 jGY
 rOA
 usf
-wOJ
+wzV
 iIg
 egd
 abm
@@ -107847,7 +107877,7 @@ bFm
 jGY
 rOA
 gmu
-nRG
+xjC
 oat
 uUQ
 uUQ

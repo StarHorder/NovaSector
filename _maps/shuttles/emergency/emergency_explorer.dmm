@@ -215,7 +215,7 @@
 /turf/open/floor/iron/sepia,
 /area/shuttle/escape)
 "qa" = (
-/turf/open/space/basic,
+/turf/template_noop,
 /area/template_noop)
 "qf" = (
 /obj/machinery/door/airlock/bathroom,
