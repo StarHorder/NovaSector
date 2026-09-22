@@ -148,11 +148,11 @@
 	port_id = "whiteship"
 	suffix = "ouroboros"
 
-/datum/map_template/shuttle/emergency/explorer
+/datum/map_template/shuttle/nova/explorer
 	name = "SFS Explorer"
 	description = "Previously an exploratory vessel, retrofitted for evacuation duties."
 	occupancy_limit = 75
-	prefix = "_maps/shuttle/nova/"
+	prefix = "_maps/shuttles/nova/"
 	suffix = "explorer"
 
 /datum/map_template/shuttle/arrivals_nova

@@ -7,7 +7,7 @@
 		"cargo": "cargo_nova",
 		"ferry": "ferry_home",
 		"whiteship": "whiteship_meta",
-		"emergency": "box"
+		"emergency": "emergency_explorer"
 	},
 	"job_changes": {
 		"Cook": {

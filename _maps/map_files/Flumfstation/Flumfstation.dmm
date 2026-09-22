@@ -25577,7 +25577,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/crew_quarters/dorms)
 "iZV" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/table/reinforced,
 /turf/open/floor/iron,
@@ -28230,10 +28229,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
-"jXr" = (
-/obj/machinery/rnd/production/techfab/department/engineering,
-/turf/open/floor/iron/dark,
-/area/station/engineering/storage_shared)
 "jXB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -29798,6 +29793,8 @@
 /area/station/hallway/primary/foreporthall)
 "kBS" = (
 /obj/machinery/light_switch/directional/north,
+/obj/effect/spawner/random/engineering/tool,
+/obj/structure/table/reinforced,
 /turf/open/floor/iron/dark,
 /area/station/engineering/break_room)
 "kBU" = (
@@ -40548,6 +40545,8 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/engineering/material,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "ovp" = (
@@ -52747,12 +52746,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/station/engineering/hallway)
-"sJf" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/table/reinforced,
-/obj/effect/spawner/random/engineering/material,
-/turf/open/floor/iron,
-/area/station/engineering/break_room)
 "sJi" = (
 /obj/structure/railing{
 	dir = 8
@@ -121264,8 +121257,8 @@ ppq
 ppq
 ppq
 ppq
-ppq
 wej
+nRl
 nRl
 qKL
 xtW
@@ -121521,9 +121514,9 @@ ppq
 ppq
 ppq
 ppq
-ppq
 wej
 nRl
+sjU
 qKL
 xtW
 xtW
@@ -121778,10 +121771,10 @@ ppq
 ppq
 ppq
 ppq
-ppq
 wej
 nRl
-qKL
+sjU
+iZV
 ovl
 tjO
 dvO
@@ -122035,13 +122028,13 @@ ppq
 ppq
 ppq
 ppq
-ppq
 wej
 nRl
+sjU
 qKL
 qKL
-sJf
-iZV
+qKL
+whE
 voE
 nFK
 whE
@@ -122292,8 +122285,8 @@ ppq
 ppq
 ppq
 ppq
-ppq
 wej
+nRl
 nRl
 nRl
 thO
@@ -122549,7 +122542,7 @@ ppq
 ppq
 ppq
 ppq
-ppq
+wej
 wej
 wej
 wej
@@ -122821,7 +122814,7 @@ xDQ
 pZe
 pZe
 mBq
-jXr
+mnw
 lGi
 ngY
 uur
