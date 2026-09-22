@@ -20412,6 +20412,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "heQ" = (
@@ -22629,6 +22630,7 @@
 /obj/effect/spawner/random/structure/chair_maintenance{
 	dir = 4
 	},
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "hTY" = (
@@ -45914,9 +45916,9 @@
 /turf/open/floor/engine,
 /area/station/science/explab)
 "qlp" = (
-/obj/machinery/duct,
-/turf/open/floor/carpet/black,
-/area/station/hallway/floor2/fore)
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/iron,
+/area/station/commons/fitness/recreation)
 "qlt" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/machinery/power/energy_accumulator/tesla_coil/anchored,
@@ -48212,6 +48214,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "rcs" = (
@@ -49698,6 +49701,7 @@
 "rEy" = (
 /obj/effect/spawner/random/structure/chair_maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "rEA" = (
@@ -151773,7 +151777,7 @@ tWo
 fOn
 iTA
 mTO
-gLL
+qlp
 quN
 laK
 ggj
@@ -152030,7 +152034,7 @@ tWo
 fOn
 iTA
 mTO
-gLL
+qlp
 gLL
 wzI
 iTA
@@ -152287,7 +152291,7 @@ tWo
 fOn
 iTA
 aHN
-gLL
+qlp
 gLL
 laK
 sAp
@@ -152544,7 +152548,7 @@ tWo
 fOn
 iTA
 pcV
-gLL
+qlp
 gLL
 laK
 lfj
@@ -155887,7 +155891,7 @@ kln
 umG
 uVT
 bEG
-qlp
+yfW
 wrD
 kdX
 lAb
