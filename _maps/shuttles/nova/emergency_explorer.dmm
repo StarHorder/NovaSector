@@ -50,7 +50,7 @@
 /area/shuttle/escape)
 "ft" = (
 /obj/effect/mapping_helpers/airlock/access/any/cent_com,
-/obj/effect/mapping_helpers/airlock/access/any/command,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /obj/machinery/door/airlock/corporate,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -91,7 +91,7 @@
 /obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /obj/structure/window/reinforced/tinted/frosted/spawner/directional/east,
 /obj/machinery/iv_drip,
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "gS" = (
 /obj/effect/turf_decal/siding{
@@ -211,7 +211,11 @@
 /turf/open/floor/iron/sepia,
 /area/shuttle/escape)
 "pv" = (
-/obj/machinery/biogenerator/food_replicator,
+/obj/machinery/biogenerator/food_replicator{
+	biomass = 600;
+	pixel_y = 8
+	},
+/obj/structure/table,
 /turf/open/floor/iron/sepia,
 /area/shuttle/escape)
 "qa" = (
@@ -381,7 +385,11 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "xv" = (
-/obj/machinery/biogenerator/food_replicator,
+/obj/machinery/biogenerator/food_replicator{
+	biomass = 600;
+	pixel_y = 9
+	},
+/obj/structure/table,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "xG" = (
@@ -410,17 +418,22 @@
 "zj" = (
 /obj/machinery/door/airlock/corporate,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	id_tag = "SHUTTLECONF"
+	id_tag = "SHUTTLECONF";
+	cycle_id = "ShuttleMeetingRoom"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/cent_com,
-/obj/effect/mapping_helpers/airlock/access/any/command,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 1
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "AK" = (
-/obj/machinery/biogenerator/food_replicator,
+/obj/machinery/biogenerator/food_replicator{
+	biomass = 600;
+	pixel_y = 8
+	},
+/obj/structure/table,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "AW" = (
@@ -438,10 +451,12 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "BK" = (
-/obj/machinery/door/airlock/corporate/glass,
-/obj/effect/turf_decal/siding/corner{
-	dir = 1
-	},
+/obj/machinery/door/airlock/corporate,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/atmos,
+/obj/effect/mapping_helpers/airlock/access/any/science/ordnance,
+/obj/effect/mapping_helpers/airlock/access/any/security/brig,
+/obj/effect/mapping_helpers/airlock/access/any/supply/qm,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron/sepia,
 /area/shuttle/escape)
 "BX" = (
@@ -559,6 +574,11 @@
 /area/shuttle/escape)
 "Gv" = (
 /obj/machinery/door/airlock/corporate,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/atmos,
+/obj/effect/mapping_helpers/airlock/access/any/science/ordnance,
+/obj/effect/mapping_helpers/airlock/access/any/security/brig,
+/obj/effect/mapping_helpers/airlock/access/any/supply/qm,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "GU" = (
@@ -821,9 +841,10 @@
 "TO" = (
 /obj/machinery/door/airlock/corporate,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	id_tag = "SHUTTLECONF"
+	id_tag = "SHUTTLECONF";
+	cycle_id = "ShuttleMeetingRoom"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/command,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /obj/effect/mapping_helpers/airlock/access/any/cent_com,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -1208,8 +1229,8 @@ dd
 OB
 rS
 dM
-Wx
 dM
+Wx
 rS
 Bm
 dd
@@ -1243,7 +1264,7 @@ dd
 rS
 um
 gM
-Wx
+dM
 rS
 Bm
 dd
@@ -1338,7 +1359,7 @@ NV
 ve
 rS
 rS
-Mp
+dd
 dd
 dd
 dd
@@ -1372,7 +1393,7 @@ yA
 NV
 yA
 rS
-Mp
+dd
 dd
 dd
 dd
@@ -1440,7 +1461,7 @@ rS
 rS
 rS
 rS
-Mp
+dd
 dd
 HK
 Bm
@@ -1473,7 +1494,7 @@ bI
 CK
 NV
 NV
-bI
+Gv
 dd
 dd
 HK
@@ -1508,7 +1529,7 @@ yA
 ve
 NV
 rS
-dd
+Mp
 dd
 HK
 Bm
@@ -1542,7 +1563,7 @@ rS
 NV
 NV
 rS
-dd
+Mp
 dd
 HK
 Bm
@@ -1576,7 +1597,7 @@ rS
 Vo
 Vo
 rS
-dd
+Mp
 OB
 dd
 dd
@@ -1610,7 +1631,7 @@ rS
 rS
 rS
 rS
-dd
+Mp
 dd
 dd
 dd
