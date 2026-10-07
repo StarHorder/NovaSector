@@ -103,11 +103,16 @@
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "tele_sci"
 
-// Security areas
+// Security Areas
 /area/station/security/checkpoint/service
 	name = "Security Post - Service"
 	icon = 'modular_nova/modules/mapping/icons/areas/areas_station.dmi'
 	icon_state = "checkpoint_serv"
+
+// Service Areas yoooooo
+/area/station/service/kitchen/shared_storage
+	name= "Shared Service Storage"
+	icon_state = "hall_service"
 
 // CO Office
 /area/station/security/corrections_officer
