@@ -34,7 +34,7 @@ jobs:
     uses: ./.github/workflows/run_linters.yml
 
   collect_data:
-    name: Collect Data
+    name: Collect data and setup caches for other tasks
     needs: start_gate
     uses: ./.github/workflows/collect_data.yml
 
@@ -46,7 +46,7 @@ jobs:
       max_required_byond_client: ${{ needs.collect_data.outputs.max_required_byond_client }}
 
   setup_build_artifacts:
-    name: Setup Build Artifacts
+    name: Setup build artifacts
     needs: collect_data
     uses: ./.github/workflows/setup_build_artifacts.yml
     with:
@@ -62,8 +62,8 @@ jobs:
       max_required_byond_client: ${{ needs.collect_data.outputs.max_required_byond_client }}
 
   run_alternate_tests:
-    name: Alternate Tests
     if: needs.collect_data.outputs.alternate_tests != '[]'
+    name: Alternate Tests
     needs: [collect_data, setup_build_artifacts]
     uses: ./.github/workflows/perform_alternate_version_tests.yml
     with:

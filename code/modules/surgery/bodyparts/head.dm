@@ -153,10 +153,10 @@
 	return real_name
 
 /obj/item/bodypart/head/can_dismember(obj/item/item)
-	if (!can_dismember && !HAS_TRAIT(owner, TRAIT_ALWAYS_ALLOW_DECAPITATION))
+	if (!can_dismember)
 		return FALSE
 
-	if(!HAS_TRAIT(owner, TRAIT_CURSED) && owner.stat < HARD_CRIT && !HAS_TRAIT(owner, TRAIT_ALWAYS_ALLOW_DECAPITATION))
+	if(!HAS_TRAIT(owner, TRAIT_CURSED) && owner.stat < HARD_CRIT)
 		return FALSE
 
 	return ..()

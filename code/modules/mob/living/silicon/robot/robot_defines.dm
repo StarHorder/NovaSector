@@ -40,7 +40,7 @@
 	// Parts
 	var/custom_name = ""
 	var/braintype = "Cyborg"
-	var/obj/item/brain_processor/mmi = null
+	var/obj/item/mmi/mmi = null
 	///Used for deconstruction to remember what the borg was constructed out of.
 	var/obj/item/robot_suit/robot_suit = null
 	///If this is a path, this gets created as an object in Initialize.
@@ -68,6 +68,7 @@
 	// Overlay for borg hat
 	var/mutable_appearance/hat_overlay
 
+	var/sight_mode = 0
 	hud_possible = list(ANTAG_HUD, DIAG_STAT_HUD, DIAG_HUD, DIAG_BATT_HUD, DIAG_TRACK_HUD)
 
 	// Modules (tool slots)

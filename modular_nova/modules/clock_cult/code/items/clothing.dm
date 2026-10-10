@@ -154,7 +154,7 @@
 	invis_view = SEE_INVISIBLE_OBSERVER
 	invis_override = null
 	flash_protect = FLASH_PROTECTION_SENSITIVE
-	clothing_traits = list(TRAIT_THERMAL_VISION)
+	vision_flags = SEE_MOBS
 	color_cutoffs = list(5, 15, 5)
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle/clock)
@@ -199,7 +199,6 @@
 	enabled = TRUE
 	color_cutoffs = list(15, 12, 0)
 	visor_toggling()
-	attach_clothing_traits(TRAIT_THERMAL_VISION)
 
 	if(wearer)
 		on_toggle_eyes()
@@ -213,7 +212,6 @@
 	enabled = FALSE
 	color_cutoffs = null
 	visor_toggling() //this doesn't remove everything, check later
-	detach_clothing_traits(TRAIT_THERMAL_VISION)
 
 	if(wearer)
 		de_toggle_eyes()

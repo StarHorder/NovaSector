@@ -237,9 +237,6 @@
 /obj/effect/turf_decal/siding/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/end
 	icon_state = "siding_plain_end"
 
@@ -251,9 +248,6 @@
 
 /obj/effect/turf_decal/siding/white/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/white/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/white/end
 	icon_state = "siding_plain_end"
@@ -267,9 +261,6 @@
 /obj/effect/turf_decal/siding/red/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/red/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/red/end
 	icon_state = "siding_plain_end"
 
@@ -281,9 +272,6 @@
 
 /obj/effect/turf_decal/siding/dark_red/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/dark_red/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/dark_red/end
 	icon_state = "siding_plain_end"
@@ -297,9 +285,6 @@
 /obj/effect/turf_decal/siding/green/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/green/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/green/end
 	icon_state = "siding_plain_end"
 
@@ -311,9 +296,6 @@
 
 /obj/effect/turf_decal/siding/dark_green/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/dark_green/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/dark_green/end
 	icon_state = "siding_plain_end"
@@ -327,9 +309,6 @@
 /obj/effect/turf_decal/siding/blue/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/blue/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/blue/end
 	icon_state = "siding_plain_end"
 
@@ -341,9 +320,6 @@
 
 /obj/effect/turf_decal/siding/dark_blue/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/dark_blue/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/dark_blue/end
 	icon_state = "siding_plain_end"
@@ -357,9 +333,6 @@
 /obj/effect/turf_decal/siding/yellow/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/yellow/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/yellow/end
 	icon_state = "siding_plain_end"
 
@@ -371,9 +344,6 @@
 
 /obj/effect/turf_decal/siding/purple/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/purple/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/purple/end
 	icon_state = "siding_plain_end"
@@ -387,9 +357,6 @@
 /obj/effect/turf_decal/siding/brown/inner_corner
 	icon_state = "siding_plain_corner_inner"
 
-/obj/effect/turf_decal/siding/brown/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
-
 /obj/effect/turf_decal/siding/brown/end
 	icon_state = "siding_plain_end"
 
@@ -401,9 +368,6 @@
 
 /obj/effect/turf_decal/siding/dark/inner_corner
 	icon_state = "siding_plain_corner_inner"
-
-/obj/effect/turf_decal/siding/dark/inner_corner_inv
-	icon_state = "siding_plain_corner_inner_inv"
 
 /obj/effect/turf_decal/siding/dark/end
 	icon_state = "siding_plain_end"

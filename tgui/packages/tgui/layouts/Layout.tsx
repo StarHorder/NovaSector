@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { useCallback, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Box } from 'tgui-core/components';
 import { addScrollableNode, removeScrollableNode } from 'tgui-core/events';
 import { classes } from 'tgui-core/react';
@@ -45,19 +45,20 @@ type ContentProps = Partial<{
 
 function LayoutContent(props: ContentProps) {
   const { className, scrollable, children, ...rest } = props;
-  const node = useCallback(
-    (self: HTMLDivElement) => {
-      if (scrollable) {
-        addScrollableNode(self);
+  const node = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const self = node.current;
+
+    if (self && scrollable) {
+      addScrollableNode(self);
+    }
+    return () => {
+      if (self && scrollable) {
+        removeScrollableNode(self);
       }
-      return () => {
-        if (scrollable) {
-          removeScrollableNode(self);
-        }
-      };
-    },
-    [scrollable],
-  );
+    };
+  }, []);
 
   return (
     <div

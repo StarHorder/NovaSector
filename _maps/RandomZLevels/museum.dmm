@@ -964,15 +964,6 @@
 "hM" = (
 /turf/closed/wall/rock/porous,
 /area/awaymission/museum)
-"hP" = (
-/obj/effect/smooths_with_walls{
-	opacity = 1
-	},
-/turf/open/mirage{
-	dir = 1;
-	target_turf_y = -29
-	},
-/area/awaymission/museum)
 "hS" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2004,14 +1995,6 @@
 /obj/item/pickaxe/drill/diamonddrill,
 /turf/open/misc/grass,
 /area/awaymission/museum/mothroachvoid)
-"qe" = (
-/obj/effect/smooths_with_walls{
-	opacity = 1
-	},
-/turf/open/mirage{
-	target_turf_y = 29
-	},
-/area/awaymission/museum)
 "qf" = (
 /obj/machinery/light/floor,
 /turf/open/floor/iron,
@@ -5402,9 +5385,6 @@
 	firstline_to_secondline = list(SOUVENIR="SHOP")
 	},
 /turf/closed/indestructible/reinforced,
-/area/awaymission/museum)
-"Sx" = (
-/turf/cordon/secret,
 /area/awaymission/museum)
 "SA" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -33950,7 +33930,7 @@ NB
 xu
 FK
 Fv
-Sx
+re
 re
 re
 re
@@ -33966,7 +33946,7 @@ re
 re
 re
 re
-Sx
+re
 AS
 FK
 FK
@@ -34207,7 +34187,6 @@ CC
 QP
 nh
 PW
-Sx
 re
 re
 re
@@ -34223,7 +34202,8 @@ re
 re
 re
 re
-Sx
+re
+re
 JK
 hV
 hV
@@ -34464,7 +34444,6 @@ CC
 QP
 TM
 PW
-Sx
 re
 re
 re
@@ -34480,7 +34459,8 @@ re
 re
 re
 re
-Sx
+re
+re
 JK
 uY
 TM
@@ -34721,7 +34701,6 @@ CC
 QP
 lf
 PW
-Sx
 re
 re
 re
@@ -34737,7 +34716,8 @@ re
 re
 re
 re
-Sx
+re
+re
 JK
 bV
 bV
@@ -34978,7 +34958,7 @@ dR
 xu
 FK
 Fv
-Sx
+re
 re
 re
 re
@@ -34994,7 +34974,7 @@ re
 re
 re
 re
-Sx
+re
 AS
 FK
 FK
@@ -35290,34 +35270,34 @@ re
 re
 re
 re
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
 aZ
 FK
 FK
@@ -38594,8 +38574,8 @@ re
 re
 re
 re
-Sx
-hP
+re
+hk
 FK
 FK
 FK
@@ -38625,8 +38605,8 @@ FK
 FK
 FK
 FK
-qe
-Sx
+lI
+re
 re
 re
 re
@@ -38851,7 +38831,7 @@ re
 re
 re
 re
-Sx
+re
 AM
 Sr
 Sr
@@ -38883,39 +38863,39 @@ Sr
 Sr
 Sr
 VD
-Sx
+re
 re
 re
 re
 Uq
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
-Sx
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
 FK
 ot
 rc
@@ -39108,7 +39088,7 @@ re
 re
 re
 re
-Sx
+re
 hk
 FK
 FK
@@ -39140,7 +39120,7 @@ FK
 FK
 FK
 lI
-Sx
+re
 re
 re
 re

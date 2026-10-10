@@ -39,7 +39,6 @@
 	worn_icon = 'icons/mob/clothing/head/costume.dmi'
 	icon_state = "paper"
 	dog_fashion = /datum/dog_fashion/head
-	item_flags = CAN_BE_OVERSLOT
 
 /obj/item/clothing/head/collectable/tophat
 	name = "collectable top hat"

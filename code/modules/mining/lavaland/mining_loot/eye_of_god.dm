@@ -3,7 +3,8 @@
 	desc = "A strange eye, said to have been torn from an omniscient creature that used to roam the wastes."
 	icon_state = "godeye"
 	inhand_icon_state = null
-	clothing_traits = list(TRAIT_MADNESS_IMMUNE, TRAIT_MESON_VISION)
+	vision_flags = SEE_TURFS
+	clothing_traits = list(TRAIT_MADNESS_IMMUNE)
 	// Blue, light blue
 	color_cutoffs = list(15, 30, 40)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF

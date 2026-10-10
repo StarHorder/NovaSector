@@ -30,7 +30,6 @@
 /obj/item/trash/candy
 	name = "candy"
 	icon_state= "candy"
-	inhand_icon_state = "candy"
 
 /obj/item/trash/cheesie
 	name = "cheesie honkers"
@@ -39,7 +38,6 @@
 /obj/item/trash/chips
 	name = "chips"
 	icon_state = "chips"
-	inhand_icon_state = "chips"
 
 /obj/item/trash/shrimp_chips
 	name = "shrimp chips"
@@ -138,8 +136,6 @@
 
 /obj/item/trash/can/Initialize(mapload)
 	. = ..()
-	if(mapload)
-		return
 	pixel_x = rand(-4,4)
 	pixel_y = rand(-4,4)
 

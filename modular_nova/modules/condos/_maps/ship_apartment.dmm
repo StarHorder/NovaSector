@@ -117,10 +117,10 @@
 /area/misc/condo)
 "dj" = (
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/pizzavoucher{
+/obj/item/choice_beacon/ingredient{
 	pixel_y = 4
 	},
-/obj/item/pizzavoucher{
+/obj/item/choice_beacon/ingredient{
 	pixel_y = 11
 	},
 /turf/open/floor/iron/kitchen{

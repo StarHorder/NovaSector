@@ -550,7 +550,7 @@
 
 		data["recipes"] += list(build_crafting_data(recipe))
 
-	var/list/datums = mode ? GLOB.cooking_recipes_datums : GLOB.crafting_recipes_datums
+	var/list/atoms = mode ? GLOB.cooking_recipes_atoms : GLOB.crafting_recipes_atoms
 
 	// Prepare atom data
 
@@ -561,22 +561,12 @@
 	var/datum/asset/spritesheet_batched/sheet = sprite_sheets[mode ? 2 : 1]
 
 	data["icon_data"] = list()
-	for(var/datum/atom as anything in datums)
-		var/atom_id = datums.Find(atom)
-		var/atom_name = ""
-		if(ispath(atom, /atom))
-			// future todo: some atoms have intentionally misleading names,
-			// and while their crafting recipe reveals their true nature,
-			// the displayed name here does not
-			var/atom/atom_path = atom
-			atom_name = atom_path::name
-		else if(ispath(atom, /datum/reagent))
-			var/datum/reagent/reagent_path = atom
-			atom_name = reagent_path::name
+	for(var/atom/atom as anything in atoms)
+		var/atom_id = atoms.Find(atom)
 
 		data["atom_data"] += list(list(
-			"name" = atom_name,
-			"is_reagent" = ispath(atom, /datum/reagent),
+			"name" = initial(atom.name),
+			"is_reagent" = ispath(atom, /datum/reagent/),
 		))
 
 		var/icon_size = sheet.icon_size_id("a[atom_id]")
@@ -587,7 +577,7 @@
 	for(var/atom/atom as anything in material_occurences)
 		if(material_occurences[atom] == 1)
 			continue // Don't include materials that appear only once
-		var/id = datums.Find(atom)
+		var/id = atoms.Find(atom)
 		data["material_occurences"] += list(list(
 				"atom_id" = "[id]",
 				"occurences" = material_occurences[atom]
@@ -662,12 +652,12 @@
 
 /datum/component/personal_crafting/proc/build_crafting_data(datum/crafting_recipe/recipe)
 	var/list/data = list()
-	var/list/datums = mode ? GLOB.cooking_recipes_datums : GLOB.crafting_recipes_datums
+	var/list/atoms = mode ? GLOB.cooking_recipes_atoms : GLOB.crafting_recipes_atoms
 
 	data["ref"] = "[REF(recipe)]"
 	var/atom/atom = recipe.result
 
-	data["id"] = datums.Find(atom)
+	data["id"] = atoms.Find(atom)
 
 	var/recipe_data = recipe.crafting_ui_data()
 	for(var/new_data in recipe_data)
@@ -712,32 +702,32 @@
 	if(recipe.tool_paths)
 		data["tool_paths"] = list()
 		for(var/req_atom in recipe.tool_paths)
-			data["tool_paths"] += datums.Find(req_atom)
+			data["tool_paths"] += atoms.Find(req_atom)
 
 	// Machinery
 	if(recipe.machinery)
 		data["machinery"] = list()
 		for(var/req_atom in recipe.machinery)
-			data["machinery"] += datums.Find(req_atom)
+			data["machinery"] += atoms.Find(req_atom)
 
 	// Structures
 	if(recipe.structures)
 		data["structures"] = list()
 		for(var/req_atom in recipe.structures)
-			data["structures"] += datums.Find(req_atom)
+			data["structures"] += atoms.Find(req_atom)
 
 	// Ingredients / Materials
 	data["reqs"] = list()
 	if(recipe.reqs.len)
 		for(var/req_atom in recipe.reqs)
-			var/id = datums.Find(req_atom)
+			var/id = atoms.Find(req_atom)
 			data["reqs"]["[id]"] = recipe.reqs[req_atom]
 
 	// Catalysts
 	if(LAZYLEN(recipe.chem_catalysts))
 		data["chem_catalysts"] = list()
 		for(var/req_atom, chem_amount in recipe.chem_catalysts)
-			var/id = datums.Find(req_atom)
+			var/id = atoms.Find(req_atom)
 			data["chem_catalysts"]["[id]"] = chem_amount
 
 	// Reaction data
@@ -749,7 +739,7 @@
 			if(!data["steps"])
 				data["steps"] = list()
 			if(reaction.required_container)
-				var/id = datums.Find(reaction.required_container)
+				var/id = atoms.Find(reaction.required_container)
 				data["reqs"]["[id]"] = 1
 				data["steps"] += "Add all ingredients into \a [initial(reaction.required_container.name)]"
 			else if(length(recipe.reqs) > 1 || length(reaction.required_catalysts))

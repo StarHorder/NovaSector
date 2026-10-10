@@ -73,14 +73,15 @@
 	update_theme()
 
 /datum/nifsoft/Destroy()
-	var/obj/item/organ/cyberimp/brain/nif/installed_nif = parent_nif?.resolve()
-	if(installed_nif)
-		if(active)
-			installed_nif.power_usage -= active_cost
-		LAZYREMOVE(installed_nif.loaded_nifsofts, src)
+	if(active)
+		activate()
 
 	linked_mob = null
-	parent_nif = null
+
+	var/obj/item/organ/cyberimp/brain/nif/installed_nif = parent_nif?.resolve()
+	if(installed_nif)
+		LAZYREMOVE(installed_nif.loaded_nifsofts, src)
+
 	return ..()
 
 /// Activates the parent NIFSoft

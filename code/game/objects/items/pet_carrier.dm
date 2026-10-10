@@ -167,13 +167,8 @@
 	if(open)
 		icon_state = "[base_icon_state]_open"
 		return ..()
-	icon_state = "[base_icon_state]_[!occupants.len ? "closed" : "occupied"]"
+	icon_state = "[base_icon_state]_[!occupants.len ? "closed" : "occupied"]_[locked ? "locked" : "unlocked"]"
 	return ..()
-
-/obj/item/pet_carrier/update_overlays()
-	. = ..()
-	if(!open)
-		. += "[base_icon_state]_[locked ? "locked" : "unlocked"]"
 
 /obj/item/pet_carrier/mouse_drop_dragged(atom/over_atom, mob/user, src_location, over_location, params)
 	if(isopenturf(over_atom) && open && occupants.len)
@@ -261,7 +256,7 @@
 /obj/item/pet_carrier/small/mouse
 	name = "small mouse carrier"
 	desc = "A small pet carrier for miniature sized animals. This looks prepared for a mouse."
-	icon_state = "small_carrier_occupied"
+	icon_state = "small_carrier_occupied_unlocked"
 	open = FALSE
 
 /obj/item/pet_carrier/small/mouse/Initialize(mapload)

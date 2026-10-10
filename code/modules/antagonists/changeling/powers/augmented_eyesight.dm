@@ -47,6 +47,7 @@
 		ling_eyes.flash_protect = max(ling_eyes.flash_protect += -3, FLASH_PROTECTION_HYPER_SENSITIVE)
 		to_chat(user, span_changeling("We adjust our eyes to sense prey through walls."))
 
+	user.update_sight()
 	return TRUE
 
 /datum/action/changeling/augmented_eyesight/Remove(mob/user)
@@ -55,6 +56,7 @@
 		ling_eyes.flash_protect = initial(ling_eyes.flash_protect)
 
 	REMOVE_TRAIT(user, TRAIT_XRAY_VISION, REF(src))
+	user.update_sight()
 
 	UnregisterSignal(user, list(COMSIG_CARBON_GAIN_ORGAN, COMSIG_CARBON_LOSE_ORGAN))
 	return ..()

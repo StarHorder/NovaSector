@@ -11,7 +11,6 @@
 	var/warped = FALSE
 	interaction_flags_mouse_drop = NEED_HANDS
 	emp_protection = EMP_PROTECTION_MODERATE
-	item_flags = CAN_BE_OVERSLOT
 
 /datum/armor/costume_foilhat
 	laser = -5

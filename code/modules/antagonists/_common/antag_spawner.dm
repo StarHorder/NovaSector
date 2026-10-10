@@ -241,7 +241,10 @@
 		brainopslastname = creator_op.nuke_team.syndicate_name
 	var/brainopsname = "[brainfirstname] [brainopslastname]"
 
-	borg.mmi.set_name(brainopsname)
+	borg.mmi.name = "[initial(borg.mmi.name)]: [brainopsname]"
+	borg.mmi.brain.name = "[brainopsname]'s brain"
+	borg.mmi.brainmob.real_name = brainopsname
+	borg.mmi.brainmob.name = brainopsname
 	borg.real_name = borg.name
 
 	borg.PossessByPlayer(C.key)

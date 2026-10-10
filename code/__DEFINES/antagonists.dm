@@ -359,7 +359,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// Only appears for spy bounties
 #define OBJECTIVE_ITEM_TYPE_SPY "spy"
 
-// Traitor objective defines
+// Progression traitor defines
 
 /// Chance that the traitor could roll hijack if the pop limit is met.
 #define HIJACK_PROB 10

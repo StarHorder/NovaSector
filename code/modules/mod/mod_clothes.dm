@@ -9,7 +9,6 @@
 	body_parts_covered = HEAD
 	heat_protection = HEAD
 	cold_protection = HEAD
-	item_flags = NONE
 
 // Even without a hat stabilizer, hats can be worn - however, they'll fall off very easily
 /obj/item/clothing/head/mod/Initialize(mapload)
@@ -36,7 +35,6 @@
 	heat_protection = CHEST|GROIN
 	cold_protection = CHEST|GROIN
 	drop_sound = null
-	item_flags = NONE
 
 /obj/item/clothing/suit/mod/Initialize(mapload)
 	. = ..()
@@ -57,7 +55,6 @@
 	equip_sound = null
 	pickup_sound = null
 	drop_sound = null
-	item_flags = NONE
 
 /obj/item/clothing/gloves/mod/Initialize(mapload)
 	. = ..()
@@ -120,7 +117,6 @@
 	equip_sound = null
 	pickup_sound = null
 	drop_sound = null
-	item_flags = NONE
 
 /obj/item/clothing/neck/mod/Initialize(mapload)
 	. = ..()

@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/ert_com
 	name = "emergency response team commander's locker"
 	desc = "A storage unit containing equipment for an Emergency Response Team Commander."
-	req_access = list(ACCESS_CENT_OFFICER)
+	req_access = list(ACCESS_CENT_CAPTAIN)
 	icon_state = "cap"
 
 /obj/structure/closet/secure_closet/ert_com/PopulateContents()

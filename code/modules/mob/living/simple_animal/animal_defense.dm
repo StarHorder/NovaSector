@@ -103,24 +103,41 @@
 	. = ..()
 	if(!. || QDELETED(src))
 		return FALSE
-	var/bomb_armor = getarmor(null, BOMB)
-	var/bomb_multi = clamp(1 - bomb_armor/166.6, 0, 1) // Scales linearly down to 40% damage at 100 armor
-	var/bloss = 0
-	switch(severity)
+
+	switch (severity)
 		if (EXPLODE_DEVASTATE)
-			if(bomb_armor < EXPLODE_GIB_THRESHOLD)
-				investigate_log("has been gibbed by an explosion.", INVESTIGATE_DEATHS)
-				gib(DROP_ALL_REMAINS)
-			else
-				bloss = 600
+			ex_act_devastate()
 		if (EXPLODE_HEAVY)
-			bloss = 60
+			ex_act_heavy()
 		if (EXPLODE_LIGHT)
-			bloss = 30
-	if(bloss)
-		bloss = round(bloss * bomb_multi, 0.1)
-		adjust_brute_loss(bloss)
+			ex_act_light()
+
 	return TRUE
+
+/// Called when a devastating explosive acts on this mob
+/mob/living/simple_animal/proc/ex_act_devastate()
+	var/bomb_armor = getarmor(null, BOMB)
+	if(prob(bomb_armor))
+		adjust_brute_loss(500)
+	else
+		investigate_log("has been gibbed by an explosion.", INVESTIGATE_DEATHS)
+		gib()
+
+/// Called when a heavy explosive acts on this mob
+/mob/living/simple_animal/proc/ex_act_heavy()
+	var/bomb_armor = getarmor(null, BOMB)
+	var/bloss = 60
+	if(prob(bomb_armor))
+		bloss = bloss / 1.5
+	adjust_brute_loss(bloss)
+
+/// Called when a light explosive acts on this mob
+/mob/living/simple_animal/proc/ex_act_light()
+	var/bomb_armor = getarmor(null, BOMB)
+	var/bloss = 30
+	if(prob(bomb_armor))
+		bloss = bloss / 1.5
+	adjust_brute_loss(bloss)
 
 /mob/living/simple_animal/blob_act(obj/structure/blob/B)
 	adjust_brute_loss(20)

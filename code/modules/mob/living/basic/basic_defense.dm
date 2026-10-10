@@ -118,23 +118,28 @@
 	. = ..()
 	if(!. || QDELETED(src))
 		return FALSE
+
 	var/bomb_armor = getarmor(null, BOMB)
-	var/bomb_multi = clamp(1 - bomb_armor/166.6, 0, 1) // Scales linearly down to 40% damage at 100 armor
-	var/bloss = 0
 	switch(severity)
 		if (EXPLODE_DEVASTATE)
-			if(bomb_armor < EXPLODE_GIB_THRESHOLD)
+			if(prob(bomb_armor))
+				apply_damage(500, damagetype = BRUTE)
+			else
 				investigate_log("has been gibbed by an explosion.", INVESTIGATE_DEATHS)
 				gib(DROP_ALL_REMAINS)
-			else
-				bloss = 600
+
 		if (EXPLODE_HEAVY)
-			bloss = 60
+			var/bloss = 60
+			if(prob(bomb_armor))
+				bloss = bloss / 1.5
+			apply_damage(bloss, damagetype = BRUTE)
+
 		if (EXPLODE_LIGHT)
-			bloss = 30
-	if(bloss)
-		bloss = round(bloss * bomb_multi, 0.1)
-		apply_damage(bloss, damagetype = BRUTE)
+			var/bloss = 30
+			if(prob(bomb_armor))
+				bloss = bloss / 1.5
+			apply_damage(bloss, damagetype = BRUTE)
+
 	return TRUE
 
 /mob/living/basic/blob_act(obj/structure/blob/attacking_blob)

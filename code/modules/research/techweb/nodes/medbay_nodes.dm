@@ -11,7 +11,6 @@
 		/datum/design/cautery,
 		/datum/design/chem_pack,
 		/datum/design/circular_saw,
-		/datum/design/defibrillator,
 		/datum/design/defibrillator_mount,
 		/datum/design/dropper,
 		/datum/design/hemostat,
@@ -75,7 +74,6 @@
 	unlocked_designs = list(
 		/datum/design/board/chem_mass_spec,
 		/datum/design/crewpinpointer,
-		/datum/design/defibrillator_compact,
 		/datum/design/defibrillator_mount_charging,
 		/datum/design/diode_disk_healing,
 		/datum/design/diode_disk_sanity,
